@@ -6,5 +6,6 @@
         key: '{{ item }}'
       with_file:
         - public_keys/laptop.pub
+        - public_keys/jerry.pub
         
     #Change password
