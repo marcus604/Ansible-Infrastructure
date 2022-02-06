@@ -1,0 +1,10 @@
+- hosts: all
+  tasks:
+    - authorized_key:
+        user: '{{ admin_user }}'
+        state: present
+        key: '{{ item }}'
+      with_file:
+        - public_keys/laptop.pub
+        
+    #Change password
